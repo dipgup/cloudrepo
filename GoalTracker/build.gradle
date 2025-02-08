@@ -26,6 +26,10 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '4.2.0'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator' // for actuator endpoints like health info
+    implementation 'org.springframework.boot:spring-boot-starter-security' // secure endpoints
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 //    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'

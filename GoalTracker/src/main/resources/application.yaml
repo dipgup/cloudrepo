@@ -1,3 +1,29 @@
+server:
+  port: 8080
+  # port: ${PORT:0} for random port each time
 spring:
   application:
     name: goalTracker
+
+# actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info # can also keep like *
+        #exclude: beans,env
+    health:
+      enabled: true
+      probes:
+        enabled: true
+    info:
+      enabled: true
+  info: # enable info endpoint also
+    env:
+      enabled: true
+
+# info endpoint details
+info:
+  app:
+    name: goalTracker
+    version: 1.0
